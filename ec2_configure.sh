@@ -6,8 +6,10 @@ source /usr/local/fsl/etc/fslconf/fsl.sh
 PATH=/usr/local/fsl/bin:$PATH
 
 # install /usr/bin/time
-sudo yum install time
+sudo yum -y install time
 
 # set up freesurfer
-export FREESURFER_HOME=<freesurfer_installation_directory>/freesurfer
+export FREESURFER_HOME=/usr/local/freesurfer/stable5_3
 source $FREESURFER_HOME/SetUpFreeSurfer.sh
+
+alias get_xwindows='sudo yum -y groupinstall 'X Window System''
